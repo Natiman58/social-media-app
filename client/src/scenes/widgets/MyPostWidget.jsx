@@ -37,6 +37,9 @@ const MyPostWidget = ({ picturePath }) => {
   const mediumMain = palette.neutral.mediumMain;
   const medium = palette.neutral.medium;
 
+  const backendUrl = "https://social-media-app-back.vercel.app";
+  const localUrl = "http://localhost:3001"
+
   const handlePost = async () => {
     const formData = new FormData();
     formData.append("userId", _id);
@@ -46,7 +49,7 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`http://localhost:3001/posts`, {
+    const response = await fetch(`${backendUrl}/posts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,

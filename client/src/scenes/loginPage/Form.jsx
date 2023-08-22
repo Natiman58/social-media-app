@@ -55,6 +55,9 @@ const Form = () => {
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
+  const backendUrl = "https://social-media-app-back.vercel.app";
+  const localUrl = "http://localhost:3001"
+
   const register = async (values, onSubmitProps) => {
     // this allows us to send form info with image
     const formData = new FormData();
@@ -64,8 +67,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      //"http://localhost:3001/auth/register"
-      "https://social-media-app-back.vercel.app/auth/register",
+      `${backendUrl}/auth/register`,
       {
         method: "POST",
         body: formData,
@@ -80,8 +82,7 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch(//"http://localhost:3001/auth/login"
-                                         "https://social-media-app-back.vercel.app/auth/login", {
+    const loggedInResponse = await fetch(`${backendUrl}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),

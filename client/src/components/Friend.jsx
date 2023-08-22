@@ -21,9 +21,12 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const isFriend = friends.find((friend) => friend._id === friendId);
 
+  const backendUrl = "https://social-media-app-back.vercel.app";
+  const localUrl = "http://localhost:3001";
+
   const patchFriend = async () => {
     const response = await fetch(
-      `http://localhost:3001/users/${_id}/${friendId}`,
+      `${backendUrl}/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
