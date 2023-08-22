@@ -27,6 +27,20 @@
           }
         ]
       }
+    ],
+    "routes": [
+      {
+        "src": "/auth/(.*)",
+        "dest": "/auth/$1"
+      },
+      {
+        "src": "/users/(.*)",
+        "dest": "/users/$1"
+      },
+      {
+        "src": "/posts/(.*)",
+        "dest": "/posts/$1"
+      }
     ]
   }
   
