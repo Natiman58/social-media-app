@@ -15,11 +15,11 @@
         "headers": [
           {
             "key": "Access-Control-Allow-Origin",
-            "value": "*"
+            "value": "https://social-media-app-front.vercel.app"
           },
           {
             "key": "Access-Control-Allow-Methods",
-            "value": "GET, POST, PUT, DELETE, OPTIONS"
+            "value": "GET, POST, PUT, DELETE, OPTIONS, PATCH"
           },
           {
             "key": "Access-Control-Allow-Headers",

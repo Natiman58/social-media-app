@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 // Configure CORS options
 const corsOptions = {
-  origin: "*",
+  origin: "https://social-media-app-front.vercel.app",
   methods: "GET, POST, PUT, DELETE, OPTIONS, PATCH",
   allowedHeaders: "X-Requested-With, Content-Type, Accept",
 };
