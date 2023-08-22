@@ -54,6 +54,14 @@ const upload = multer({ storage });
 app.post("/auth/register", upload.single("picture"), register);
 app.post("/posts", verifyToken, upload.single("picture"), createPost);
 
+// Handle preflight OPTIONS for login route
+app.options("/auth/login", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://social-media-app-front.vercel.app");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, PATCH");
+  res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Accept");
+  res.status(200).end();
+});
+
 /* ROUTES */
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
