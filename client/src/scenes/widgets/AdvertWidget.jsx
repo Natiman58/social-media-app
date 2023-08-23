@@ -8,6 +8,8 @@ const AdvertWidget = () => {
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
 
+  const backendUrl = "https://social-media-app-back.vercel.app/"
+
   return (
     <WidgetWrapper>
       <FlexBetween>
@@ -20,9 +22,10 @@ const AdvertWidget = () => {
         width="100%"
         height="auto"
         alt="advert"
-        src="http://localhost:3001/assets/info4.jpeg"
+        src={`${backendUrl}/assets/info4.jpeg`}
         style={{ borderRadius: "0.75rem", margin: "0.75rem 0" }}
       />
+
       <FlexBetween>
         <Typography color={main}>MikaCosmetics</Typography>
         <Typography color={medium}>mikacosmetics.com</Typography>
