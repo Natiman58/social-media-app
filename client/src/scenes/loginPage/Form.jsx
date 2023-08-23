@@ -55,7 +55,7 @@ const Form = () => {
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
-  const backendUrl = "https://social-media-app-back.vercel.app";
+  const backendUrl = "https://social-media-app-back.vercel.app/";
   const localUrl = "http://localhost:3001"
 
   const register = async (values, onSubmitProps) => {
@@ -66,8 +66,7 @@ const Form = () => {
     }
     formData.append("picturePath", values.picture.name);
 
-    const savedUserResponse = await fetch(
-      `${backendUrl}/auth/register`,
+    const savedUserResponse = await fetch(`${backendUrl}/auth/register`,
       {
         method: "POST",
         body: formData,
