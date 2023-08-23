@@ -55,7 +55,7 @@ const Form = () => {
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
-  const backendUrl = "https://social-media-app-back.vercel.app/";
+  const backendUrl = "https://social-media-app-back.vercel.app";
   const localUrl = "http://localhost:3001"
 
   const register = async (values, onSubmitProps) => {
