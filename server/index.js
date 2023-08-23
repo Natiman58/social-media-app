@@ -24,9 +24,9 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: 'https://social-media-app-front.vercel.app', // Allow requests from this domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], // Specify allowed methods
-  credentials: true // Allow credentials (cookies, headers, etc.) to be sent
+  origin: 'https://social-media-app-front.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  credentials: true
 }));
 
 
