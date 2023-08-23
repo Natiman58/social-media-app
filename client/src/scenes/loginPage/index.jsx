@@ -25,7 +25,7 @@ const LoginPage = () => {
         backgroundColor={theme.palette.background.alt}
       >
         <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
-          Welcome to Socipedia, the Social Media for Sociopaths!
+          Welcome to My Socials.
         </Typography>
         <Typography style={{marginLeft: "10rem", marginBottom: "1.5rem"}}>
               Dummy Account:- Email: someone@gmail.com and PWD:1234
