@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          MY SOCIALS
+          My Socials
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween

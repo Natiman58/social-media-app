@@ -267,10 +267,6 @@ const Form = () => {
                 ? "Don't have an account? Sign Up here."
                 : "Already have an account? Login here."}
             </Typography>
-            <br></br>
-            <Typography>
-              Dummy Account:- Email: someone@gmail.com and PWD:1234
-            </Typography>
           </Box>
         </form>
       )}
